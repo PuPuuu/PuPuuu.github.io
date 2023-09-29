@@ -29,7 +29,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-    let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+    let dist = getDistance(104.065735, 30.659462, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
@@ -104,7 +104,7 @@ function showWelcome() {
                     }
                     break;
                 case "浙江省":
-                    posdesc = "东风渐绿西湖柳，雁已还人未南归。";
+                    posdesc = "东风渐绿西湖柳，雁已还人未南归。（我的老家！）";
                     break;
                 case "河南省":
                     switch (ipLoacation.result.ad_info.city) {
@@ -156,7 +156,10 @@ function showWelcome() {
                     posdesc = "朝观日出逐白浪，夕看云起收霞光。";
                     break;
                 case "四川省":
-                    posdesc = "康康川妹子。";
+                    posdesc = "不吃火锅就吃烤匠！";
+                    break;
+                case "重庆市":
+                    posdesc = "梦想开始准备起航～";
                     break;
                 case "贵州省":
                     posdesc = "茅台，学生，再塞200。";
@@ -215,7 +218,7 @@ function showWelcome() {
     try {
         //自定义文本和需要放的位置
         document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离天府之国成都，一座来了就不想走的城市，约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
     } catch (err) {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
